@@ -31,9 +31,11 @@ APP.NoteNewView = Backbone.View.extend({
       // save it
       this.collection.add(this.model);
       this.model.save();
+      Backbone.history.navigate('#notes/index');
+           window.location.reload();
       // add it to the collection
       // redirect back to the index
-      Backbone.history.navigate("notes/index", {trigger: true});
+      //Backbone.history.navigate("notes/index", {trigger: true});
     }
   },
 
